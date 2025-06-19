@@ -11,7 +11,7 @@ interface GameBoardProps {
 
 const GameBoard = ({ board, onCellClick }: GameBoardProps) => {
   return (
-    <div className="grid grid-cols-3 gap-2 p-4 bg-slate-100 rounded-lg">
+    <div className="grid grid-cols-3 gap-2 p-4 bg-slate-700 rounded-lg border border-slate-600">
       {board.map((cell, index) => (
         <GameCell
           key={index}

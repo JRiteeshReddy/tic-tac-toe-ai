@@ -87,9 +87,9 @@ const TicTacToe = () => {
   };
 
   return (
-    <Card className="w-full shadow-lg">
+    <Card className="w-full shadow-2xl bg-slate-800 border-slate-700">
       <CardHeader className="text-center">
-        <CardTitle className="text-2xl font-bold text-slate-800">
+        <CardTitle className="text-2xl font-bold text-white">
           {gameOver 
             ? winner 
               ? `${winner === "X" ? "You" : "AI"} Win${winner === "X" ? "" : "s"}!`
@@ -104,31 +104,31 @@ const TicTacToe = () => {
         <GameBoard board={board} onCellClick={handleCellClick} />
         
         <div className="grid grid-cols-3 gap-4 text-center text-sm">
-          <div className="bg-blue-50 p-3 rounded-lg">
-            <div className="font-bold text-blue-600">You</div>
-            <div className="text-2xl font-bold text-blue-800">{playerScore}</div>
+          <div className="bg-blue-900/50 p-3 rounded-lg border border-blue-700">
+            <div className="font-bold text-blue-300">You</div>
+            <div className="text-2xl font-bold text-blue-100">{playerScore}</div>
           </div>
-          <div className="bg-gray-50 p-3 rounded-lg">
-            <div className="font-bold text-gray-600">Draws</div>
-            <div className="text-2xl font-bold text-gray-800">{draws}</div>
+          <div className="bg-slate-700/50 p-3 rounded-lg border border-slate-600">
+            <div className="font-bold text-slate-300">Draws</div>
+            <div className="text-2xl font-bold text-slate-100">{draws}</div>
           </div>
-          <div className="bg-orange-50 p-3 rounded-lg">
-            <div className="font-bold text-orange-600">AI</div>
-            <div className="text-2xl font-bold text-orange-800">{aiScore}</div>
+          <div className="bg-orange-900/50 p-3 rounded-lg border border-orange-700">
+            <div className="font-bold text-orange-300">AI</div>
+            <div className="text-2xl font-bold text-orange-100">{aiScore}</div>
           </div>
         </div>
 
         <div className="flex gap-2">
           <Button 
             onClick={resetGame} 
-            className="flex-1"
+            className="flex-1 bg-slate-700 hover:bg-slate-600 text-white border-slate-600"
             variant="outline"
           >
             New Game
           </Button>
           <Button 
             onClick={resetScore} 
-            className="flex-1"
+            className="flex-1 bg-red-900 hover:bg-red-800 text-white"
             variant="destructive"
           >
             Reset Score
